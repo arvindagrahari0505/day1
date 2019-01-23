@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class Panagram {
+
+public class StringManipulationExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,12 +17,12 @@ public class Panagram {
 			arr[index]++;
 		}
 		for(int i=0;i<26;i++) {
-			if(arr[i]==0) {
-				System.out.println("It is not a Panagram");
-				System.exit(0);
+			if(arr[i]!=0) {
+				char temp = (char)(97+i);
+				System.out.print(temp+"="+arr[i]+",");
 			}
 		}
-		System.out.println("It is a Panagram");
+		
 		sc.close();
 	}
 
