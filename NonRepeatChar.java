@@ -9,7 +9,7 @@ public class NonRepeatChar {
 		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter a String");
-		String str = sc.next();
+		String str = sc.nextLine().replaceAll(" ","").toLowerCase();
 		for (int i=0; i<str.length(); i++) {
             count[str.charAt(i)]++;
 		}

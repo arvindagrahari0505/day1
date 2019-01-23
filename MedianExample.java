@@ -34,9 +34,14 @@ public class MedianExample {
 			i++;
 		}
 		Arrays.sort(result);
-		for(i=0;i<result.length;i++) {
-			System.out.println(result[i]);
+		
+		if(result.length%2==0) {
+			System.out.println(((result[result.length/2])+(result[(result.length/2)-1]))/2.0);
 		}
+		else {
+			System.out.println(result[result.length/2]);
+		}
+		
 		sc.close();
 		
 	}
