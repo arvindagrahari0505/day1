@@ -6,20 +6,31 @@ public class ReverseString {
 		// TODO Auto-generated method stub
 		
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a String");
 		String str = sc.nextLine();
 		
-		for(int i=0;i<str.length();i++) {
-			if(str.charAt(i)==' ') {
-				System.out.print(' ');
-				System.out.print(str.charAt(str.length()-i-1));
-			}
-			else {
-				if(str.charAt(str.length()-i-1)==' ') {
-					continue;
-				}
-				System.out.print(str.charAt(str.length()-i-1));
+		char[] arr= str.toCharArray();
+		char[] res=new char[arr.length];
+		
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]==' ') {
+				res[i]=' ';
 			}
 		}
+		int j=arr.length-1;
+		
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]!=' ') {
+				if(res[j]==' ') {
+					j--;
+				}
+				res[j]=arr[i];
+				j--;
+			}
+		}
+		
+		String output=new String(res);
+		System.out.println(output);
 		sc.close();
 
 	}
